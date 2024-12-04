@@ -1,3 +1,24 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# IntelliJ IDEA specific
+*.iml
+.idea/
+out/
+# OS-specific files
+.DS_Store
+Thumbs.db
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar # Keep wrapper jar in version control
+
+build/
+
 # Compiled class file
 *.class
 
