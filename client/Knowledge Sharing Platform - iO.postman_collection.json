@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "55e456bc-9601-4744-a4d0-71632f1d9ffe",
+		"name": "Knowledge Sharing Platform - iO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4765352"
+	},
+	"item": [
+		{
+			"name": "Speakers",
+			"item": [
+				{
+					"name": "Find Top Speakers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/speakers?topN=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"speakers"
+							],
+							"query": [
+								{
+									"key": "topN",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/speakers/Misha Glenny",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"speakers",
+								"Misha Glenny"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TedTalks",
+			"item": [
+				{
+					"name": "Save or update TedTalk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"TEST1\",\n    \"year\": 2024,\n    \"views\": 70,\n    \"likes\": 4,\n    \"link\": \"testlink.com/tedtalk\",\n    \"authors\": [\n        \"Carlos\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/ted-talks",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ted-talks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/carlosguzman/Downloads/data.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/ted-talks/import",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ted-talks",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Influential TedTalks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ted-talks",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ted-talks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
