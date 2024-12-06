@@ -25,6 +25,7 @@ dependencies {
 
 	implementation 'org.slf4j:slf4j-api:2.0.9' // SLF4J API
 	implementation 'ch.qos.logback:logback-classic:1.4.12' // Logback
+	implementation 'org.apache.commons:commons-csv:1.10.0'
 }
 
 tasks.named('test') {
